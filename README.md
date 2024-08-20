@@ -1,62 +1,71 @@
 # FinSenti
 
-FinSenti is a Jupyter Notebook-based project designed to analyze and classify sentiments in financial text data. This notebook employs Natural Language Processing (NLP) techniques to preprocess text, generate visual insights, and build a classification model to predict sentiments.
+FinSenti is a Streamlit-based project designed to analyze and classify sentiments in financial text data. This application employs Natural Language Processing (NLP) techniques to preprocess text, generate visual insights, and build a classification model to predict sentiments.
 
 ## Features
 - **Text Preprocessing:** Includes tokenization, stemming, and lemmatization.
-- **Text Analysis:** Visualizes text data with word clouds and performs sentiment analysis.
+- **Data Overview:** Displays basic dataset information, descriptive statistics, and missing value analysis.
+- **Data Visualization:** Visualizes sentiment distribution with bar plots and pie charts.
+- **Text Analysis:** Generates word clouds and performs N-Gram analysis (Bigrams and Trigrams).
 - **Text Vectorization:** Converts text data into numerical format using TF-IDF.
-- **Model Training and Evaluation:** Uses a RandomForestClassifier to classify sentiments, with data balancing handled by SMOTE.
-- **Interactive Prediction (Future Plans):** Integration with Streamlit for interactive sentiment predictions.
+- **Model Training and Evaluation:** Utilizes a RandomForestClassifier to classify sentiments, with data balancing handled by SMOTE.
+- **Interactive Interface:** Provides an interactive interface for exploring data, visualizations, and model evaluation.
 
 ## Installation
 
 1. **Clone the Repository:**
-```
-git clone https://github.com/MLVoyager3791/FinSenti.git
-cd FinSenti
-```
+    ```bash
+    git clone https://github.com/MLVoyager3791/FinSenti.git
+    cd FinSenti
+    ```
 
-2. **Install Dependencies:**\
-Ensure you have Python 3.7+ installed, then run:
-```
-pip install -r requirements.txt
-```
-The requirements.txt file should include:
-```
-pandas
-nltk
-wordcloud
-textblob
-scikit-learn
-imbalanced-learn
-jupyter
-```
+2. **Install Dependencies:**
+    Ensure you have Python 3.7+ installed, then run:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    The `requirements.txt` file should include:
+    ```
+    streamlit
+    pandas
+    numpy
+    matplotlib
+    seaborn
+    wordcloud
+    nltk
+    scikit-learn
+    imbalanced-learn
+    ```
 
 ## Usage
 
-1. **Open the Jupyter Notebook:**\
-Launch Jupyter Notebook:
-```
-jupyter notebook
-```
-Then, open run.ipynb in the Jupyter interface.
+1. **Run the Streamlit App:**
+    ```bash
+    streamlit run app.py
+    ```
+    This will launch the application in your default web browser.
 
-2. **Run the Notebook:**\
-Follow the instructions in the notebook to load data, preprocess text, analyze sentiments, and train models.\
-Review the visualizations and classification results.
+2. **Upload a Dataset:**
+    - Use the interface to upload a CSV file containing financial text data.
+    - The app will display basic dataset information, descriptive statistics, and visualizations.
 
-## Future Plans
+3. **Text Preprocessing:**
+    - The uploaded text data will be tokenized, stemmed, and lemmatized automatically.
 
-**Streamlit Integration:** Future updates will include transforming this notebook into a Streamlit application for interactive analysis and prediction of financial text sentiments.
+4. **Text Analysis:**
+    - Explore word clouds and N-Gram analysis to understand the common terms and phrases in your data.
+
+5. **Model Training:**
+    - The app will vectorize the text using TF-IDF and train a RandomForestClassifier, with an option to tune hyperparameters.
+    - Evaluate the model using a confusion matrix, classification report, and feature importance plot.
 
 ## Example
 
-1. **Running the Notebook:**\
-The notebook will guide you through each step, including data loading, preprocessing, analysis, and model training.
+1. **Running the Application:**
+    - The application will guide you through each step, from data upload to model evaluation.
 
-2. **Interactive Features (Planned):**\
-The future Streamlit app will allow users to input their own text for real-time sentiment predictions.
+2. **Interactive Features:**
+    - The Streamlit app allows users to interactively explore data and model results, providing real-time feedback on different inputs.
 
 ## Contributing
 
